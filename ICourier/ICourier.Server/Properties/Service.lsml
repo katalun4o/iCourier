@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication"
+  Version="1.0.0.0" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <ModuleNamespace
+      Namespace="LightSwitchApplication" />
+    <Partial
+      IsPrimary="True" />
+  </ServiceApplication.Attributes>
+  <EntityContainerGroup
+    Name="DataWorkspace">
+    <EntityContainerGroupProperty
+      Name="SecurityData"
+      EntityContainer="Microsoft.LightSwitch.Security:SecurityData">
+      <EntityContainerGroupProperty.Attributes>
+        <Generated />
+        <DisplayName
+          Value="Security Data" />
+        <Description
+          Value="Service that provides access to security-related data." />
+      </EntityContainerGroupProperty.Attributes>
+    </EntityContainerGroupProperty>
+    <EntityContainerGroupProperty
+      Name="CourierAzureData"
+      EntityContainer="CourierAzureData" />
+    <EntityContainerGroupProperty
+      Name="XtraReportsServiceData"
+      EntityContainer="XtraReportsServiceData" />
+    <EntityContainerGroupProperty
+      Name="CourierAzureData1"
+      EntityContainer="CourierAzureData1" />
+    <EntityContainerGroupProperty
+      Name="ApplicationData"
+      EntityContainer="ApplicationData" />
+    <EntityContainerGroupProperty
+      Name="CourierAzureData2"
+      EntityContainer="CourierAzureData2" />
+  </EntityContainerGroup>
+  <GlobalAttributeGroup
+    Name="LightSwitchServiceApplicationGroup">
+    <GlobalAttributeGroup.Attributes>
+      <AutomaticDisplayName
+        Expression="(\p{Ll})(\p{Lu})|_+"
+        Replacement="$1 $2" />
+    </GlobalAttributeGroup.Attributes>
+  </GlobalAttributeGroup>
+  <GlobalValueContainerDefinition
+    Name="VoucherGlobalDef">
+    <GlobalValueDefinition
+      Name="GetCurrentSenderID"
+      ReturnType=":Decimal">
+      <GlobalValueDefinition.Attributes>
+        <DisplayName
+          Value="Sender ID" />
+        <Description
+          Value="Gets the logged on User's Sender ID." />
+      </GlobalValueDefinition.Attributes>
+    </GlobalValueDefinition>
+  </GlobalValueContainerDefinition>
+  <Permission
+    Name="CanEditSendersList">
+    <Permission.Attributes>
+      <DisplayName
+        Value="CanEditSendersList" />
+      <Description
+        Value="Able to add and edit senders list" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission
+    Name="CanEditSenderDetails">
+    <Permission.Attributes>
+      <DisplayName
+        Value="CanEditSenderDetails" />
+      <Description
+        Value="Able to edit sender details" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission
+    Name="CanSearchSenderVouchers">
+    <Permission.Attributes>
+      <DisplayName
+        Value="CanSearchSenderVouchers" />
+      <Description
+        Value="Able to search vouchers and filter by Sender" />
+    </Permission.Attributes>
+  </Permission>
+</ServiceApplication>

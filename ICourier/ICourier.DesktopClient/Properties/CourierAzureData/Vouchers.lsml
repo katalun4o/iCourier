@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+  Name="LightSwitchApplication.ICourier.DesktopClient" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application.Attributes>
+    <Partial />
+  </Application.Attributes>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Voucher" />
+      <DefaultScreen
+        Value="VoucherEditScreen">
+        <DefaultScreen.Attributes>
+          <ScreenParameterMapping
+            KeyProperty="Voucher/Properties[VoucherID]"
+            ScreenParameter="VoucherEditScreen/Properties[VoucherID]" />
+        </DefaultScreen.Attributes>
+      </DefaultScreen>
+    </EntityType.Attributes>
+    <EntityType.Properties>
+      <EntityProperty>
+        <EntityProperty.Attributes>
+          <Proxy
+            Target="ServiceInterface:Voucher/Properties[BillOfLading]" />
+          <DisplayName
+            Value="Φορτωτική" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty>
+        <EntityProperty.Attributes>
+          <Proxy
+            Target="ServiceInterface:Voucher/Properties[Memo1]" />
+          <DisplayName
+            Value="Σχόλια 1" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty>
+        <EntityProperty.Attributes>
+          <Proxy
+            Target="ServiceInterface:Voucher/Properties[Memo2]" />
+          <DisplayName
+            Value="Σχόλια 2" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty>
+        <EntityProperty.Attributes>
+          <Proxy
+            Target="ServiceInterface:Voucher/Properties[TimeCommitment]" />
+          <DisplayName
+            Value="Δεσμεύση ώρας" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty>
+        <EntityProperty.Attributes>
+          <Computed />
+          <Proxy
+            Target="LightSwitchServiceApplication:Voucher/Properties[CustomDate]" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty>
+        <EntityProperty.Attributes>
+          <Computed />
+          <Proxy
+            Target="LightSwitchServiceApplication:Voucher/Properties[LastStatus]" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+</Application>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+  Name="LightSwitchApplication.ICourier.DesktopClient" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application.Attributes>
+    <Partial />
+  </Application.Attributes>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Customer" />
+      <SummaryProperty
+        Property="Customer/Properties[Name]" />
+    </EntityType.Attributes>
+    <EntityType.Properties>
+      <NavigationProperty>
+        <NavigationProperty.Attributes>
+          <Proxy
+            Target="ServiceInterface:Customer/Properties[Sender]" />
+          <Hidden />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+    </EntityType.Properties>
+  </EntityType>
+</Application>

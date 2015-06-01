@@ -1,0 +1,578 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectTypeGuids>{DA98106F-DEFA-4A62-8804-0BD2F166A45D};{349c5851-65df-11da-9384-00065b846f21};{FAE04EC0-301F-11d3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{FA496BF1-831F-4036-A16F-6587A7CBF66A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LightSwitchApplication</RootNamespace>
+    <AssemblyName>Application.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <LightSwitchVersion>v4.0</LightSwitchVersion>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <SupportedCultures>en-US</SupportedCultures>
+    <FileAlignment>512</FileAlignment>
+    <IgnoreDeployManagedRuntimeVersion>True</IgnoreDeployManagedRuntimeVersion>
+    <UseDeclareParametersXMLInMsDeploy>False</UseDeclareParametersXMLInMsDeploy>
+    <LightSwitchDisplayName>Server</LightSwitchDisplayName>
+    <LightSwitchProjectTypeV3>Server</LightSwitchProjectTypeV3>
+    <MicrosoftSdkDir Condition=" '$(MicrosoftSdkDir)' == '' ">$([System.IO.Path]::Combine($(MSBuildProgramFiles32), 'Microsoft SDKs'))</MicrosoftSdkDir>
+    <LightSwitchSDKPath Condition=" '$(LightSwitchSDKPath)' == '' ">$([System.IO.Path]::Combine($(MicrosoftSdkDir), 'LightSwitch', $(LightSwitchVersion)))</LightSwitchSDKPath>
+    <LightSwitchSDKPath Condition=" '$(LightSwitchSDKPath)' != '' and !HasTrailingSlash('$(LightSwitchSDKPath)')">$(LightSwitchSDKPath)\</LightSwitchSDKPath>
+    <NuGetPackagesFolder Condition=" Exists('..\Packages')">..\Packages\</NuGetPackagesFolder>
+    <NuGetPackagesFolder Condition=" Exists('..\..\Packages')">..\..\Packages\</NuGetPackagesFolder>
+    <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WCFRIAServices\v1.0@InstallPath)</WCFRIASERVICESSDKPath>
+    <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\WCFRIAServices\v1.0@InstallPath)</WCFRIASERVICESSDKPath>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseDesignTimeFeatures>true</UseDesignTimeFeatures>
+    <NoWarn>1522</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseDesignTimeFeatures>false</UseDesignTimeFeatures>
+    <NoWarn>1522</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v13.2.Core, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v13.2.Core, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v13.2.Core, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v13.2.Core, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v13.2.Core, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Printing.v13.2.Service, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.2.LightSwitch.Server, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.2.Service, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core">
+      <HintPath>..\..\packages\Microsoft.AspNet.SignalR.Core.2.1.2\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb">
+      <HintPath>..\..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.1.2\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.Extensions.Server">
+      <HintPath>..\_Pvt_Extensions\Microsoft.LightSwitch.Extensions\Server\Reference\Microsoft.LightSwitch.Extensions.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\..\packages\Microsoft.Owin.2.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\..\packages\Microsoft.Owin.Host.SystemWeb.2.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.2.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeIntegration.Common">
+      <HintPath>..\_Pvt_Extensions\OfficeIntegration\ServerGen\Reference\OfficeIntegration.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeIntegration.Server">
+      <HintPath>..\_Pvt_Extensions\OfficeIntegration\Server\Reference\OfficeIntegration.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Data">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Web">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch">
+      <HintPath>$(LightSwitchSDKPath)\Client\Microsoft.LightSwitch.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.AppBridge">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.AppBridge.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.ExportProvider, Version=10.0.12.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>$(LightSwitchSDKPath)\Client\Microsoft.LightSwitch.ExportProvider.dll</HintPath>
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.CodeMarker, Version=12.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>$(LightSwitchSDKPath)\Client\Microsoft.LightSwitch.CodeMarker.dll</HintPath>
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.ManifestService">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.ManifestService.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.Model.Xaml">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.Model.Xaml.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.Server">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.Server.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.Server.Host">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.Server.Host.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.PollingDuplex">
+      <HintPath>$(LightSwitchSDKPath)\Server\System.ServiceModel.PollingDuplex.dll</HintPath>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.Data.Services.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.IdentityModel.Tokens.Jwt">
+      <HintPath>$(NuGetPackagesFolder)\System.IdentityModel.Tokens.Jwt.1.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Spatial">
+      <HintPath>$(LightSwitchSDKPath)\Server\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.EntityFramework">
+      <HintPath>$(WCFRIASERVICESSDKPath)\v1.0\Libraries\Server\System.ServiceModel.DomainServices.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Hosting">
+      <HintPath>$(WCFRIASERVICESSDKPath)\v1.0\Libraries\Server\System.ServiceModel.DomainServices.Hosting.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Hosting.OData">
+      <HintPath>$(WCFRIASERVICESSDKPath)\v1.0\Libraries\Server\System.ServiceModel.DomainServices.Hosting.OData.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Server">
+      <HintPath>$(WCFRIASERVICESSDKPath)\v1.0\Libraries\Server\System.ServiceModel.DomainServices.Server.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="TransientFaultHandling">
+      <HintPath>..\..\packages\TransientFaultHandling.1.0.4\lib\net45\TransientFaultHandling.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSources\ApplicationData\Table1Item.lsml.cs">
+      <DependentUpon>Table1Items.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\_ApplicationDataService.lsml.cs" />
+    <Compile Include="DataSources\CourierAzureData2\Voucher1.lsml.cs">
+      <DependentUpon>Vouchers.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\CourierAzureData\CostCenter.lsml.cs">
+      <DependentUpon>CostCenters.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\CourierAzureData\Customer.lsml.cs">
+      <DependentUpon>Customers.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\CourierAzureData\ExcelLayout.lsml.cs">
+      <DependentUpon>ExcelLayouts.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\CourierAzureData\Voucher.lsml.cs">
+      <DependentUpon>Vouchers.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\CourierAzureData\_CourierAzureDataService.lsml.cs" />
+    <Compile Include="DataSources\XtraReportsServiceData\_XtraReportsServiceDataService.lsml.cs" />
+    <Compile Include="Data\AuthenticateResult.cs" />
+    <Compile Include="Data\Checkpoint.cs" />
+    <Compile Include="Data\CreateJobResult.cs" />
+    <Compile Include="Data\DataSender.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\DataVoucher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\DataVoucherStatus.cs" />
+    <Compile Include="Data\ErrorCodes.cs" />
+    <Compile Include="Data\GetJobsResult.cs" />
+    <Compile Include="Data\GetVoucherJobResult.cs" />
+    <Compile Include="Data\Record.cs" />
+    <Compile Include="Data\TrackAndTraceResult.cs" />
+    <Compile Include="Data\VoucherJob.cs" />
+    <Compile Include="Handler1.ashx.cs">
+      <DependentUpon>Handler1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="interpostprint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="interpostprint.designer.cs">
+      <DependentUpon>interpostprint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IService2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="iusermethods.cs" />
+    <Compile Include="NewDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PrintTemplates\FIS\FisPrint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintTemplates\FIS\FisPrint.Designer.cs">
+      <DependentUpon>FisPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintTemplates\Interpost\InterpostPrint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintTemplates\Interpost\InterpostPrint.Designer.cs">
+      <DependentUpon>InterpostPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintTemplates\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintTemplates\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintTemplates\XtraReport2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintTemplates\XtraReport2.Designer.cs">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\EReportCustomer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\EReportCustomer.Designer.cs">
+      <DependentUpon>EReportCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service2.svc.cs">
+      <DependentUpon>Service2.svc</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="VoucherGlobalDef.cs" />
+    <Compile Include="VoucherHelper.cs" />
+    <Compile Include="VoucherHub.cs" />
+    <Compile Include="VoucherReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VoucherReport.Designer.cs">
+      <DependentUpon>VoucherReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoucherReportInterpost.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VoucherReportInterpost.Designer.cs">
+      <DependentUpon>VoucherReportInterpost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoucherReportInterpostLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VoucherReportInterpostLabel.Designer.cs">
+      <DependentUpon>VoucherReportInterpostLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoucherReportKodo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VoucherReportKodo.Designer.cs">
+      <DependentUpon>VoucherReportKodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoucherTemplateReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VoucherTemplateReport.Designer.cs">
+      <DependentUpon>VoucherTemplateReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoucherReportCourier4U.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VoucherReportCourier4U.Designer.cs">
+      <DependentUpon>VoucherReportCourier4U.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <LightSwitchModel Include="Properties\Service.lsml">
+      <ProjectCritical>true</ProjectCritical>
+    </LightSwitchModel>
+  </ItemGroup>
+  <ItemGroup>
+    <_ServerFile Include="LogIn.aspx" />
+    <_ServerFile Include="LogOut.aspx" />
+    <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.4.js" />
+    <Content Include="Scripts\jquery-1.6.4.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.1.2.js" />
+    <Content Include="Scripts\jquery.signalR-2.1.2.min.js" />
+    <Content Include="Service2.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <LightSwitchModel Include="DataSources\CourierAzureData\Senders.lsml" />
+    <LightSwitchModel Include="DataSources\CourierAzureData\Vouchers.lsml" />
+    <LightSwitchModel Include="Properties\DataSources\CourierAzureData.lsml" />
+    <LightSwitchModel Include="DataSources\XtraReportsServiceData\MessageEnvelopes.lsml" />
+    <LightSwitchModel Include="Properties\DataSources\XtraReportsServiceData.lsml" />
+    <LightSwitchModel Include="DataSources\CourierAzureData1\VouchersViews.lsml" />
+    <LightSwitchModel Include="Properties\DataSources\CourierAzureData1.lsml" />
+    <LightSwitchModel Include="DataSources\CourierAzureData\Query1.lsml">
+      <DependentUpon>Vouchers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\CourierAzureData1\SenderVouchersView.lsml">
+      <DependentUpon>VouchersViews.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\CourierAzureData\CostCenters.lsml" />
+    <LightSwitchModel Include="DataSources\CourierAzureData\ExcelLayouts.lsml" />
+    <LightSwitchModel Include="DataSources\CourierAzureData\Query3.lsml">
+      <DependentUpon>CostCenters.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\CourierAzureData\queryExcelLayout.lsml">
+      <DependentUpon>ExcelLayouts.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="Properties\DataSources\ApplicationData.lsml" />
+    <LightSwitchModel Include="DataSources\CourierAzureData2\Vouchers.lsml" />
+    <LightSwitchModel Include="Properties\DataSources\CourierAzureData2.lsml" />
+    <LightSwitchModel Include="DataSources\CourierAzureData2\Query2.lsml">
+      <DependentUpon>Vouchers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\CourierAzureData\Customers.lsml" />
+    <LightSwitchModel Include="DataSources\CourierAzureData\queryCustomers.lsml">
+      <DependentUpon>Customers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\Table1Items.lsml" />
+    <Content Include="Handler1.ashx" />
+    <LightSwitchModel Include="DataSources\CourierAzureData1\VouchersViewSorted.lsml">
+      <DependentUpon>VouchersViews.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\CourierAzureData1\VouchersViewDoubles.lsml" />
+    <LightSwitchModel Include="DataSources\CourierAzureData1\QueryVoucherViewDouble.lsml">
+      <DependentUpon>VouchersViewDoubles.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\CourierAzureData\VouchersViews.lsml" />
+    <Content Include="NewDataset.xsc">
+      <DependentUpon>NewDataset.xsd</DependentUpon>
+    </Content>
+    <LightSwitchModel Include="DataSources\CourierAzureData\Status.lsml" />
+    <None Include="NewDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>NewDataset.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="NewDataset.xss">
+      <DependentUpon>NewDataset.xsd</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="packages.config" />
+    <_ServerFile Include="default.aspx" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PrintTemplates\FIS\FisPrint.resx">
+      <DependentUpon>FisPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintTemplates\Interpost\InterpostPrint.resx">
+      <DependentUpon>InterpostPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintTemplates\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintTemplates\XtraReport2.resx">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Reports\EReportCustomer.resx">
+      <DependentUpon>EReportCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoucherReport.resx">
+      <DependentUpon>VoucherReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoucherReportInterpost.resx">
+      <DependentUpon>VoucherReportInterpost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoucherReportInterpostLabel.resx">
+      <DependentUpon>VoucherReportInterpostLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoucherReportKodo.resx">
+      <DependentUpon>VoucherReportKodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoucherTemplateReport.resx">
+      <DependentUpon>VoucherTemplateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoucherReportCourier4U.resx">
+      <DependentUpon>VoucherReportCourier4U.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\VoucherTracking\VoucherTracking.csproj">
+      <Project>{b1e860a7-7f77-4404-b973-f15d2e783d76}</Project>
+      <Name>VoucherTracking</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\$(LightSwitchVersion)\Microsoft.LightSwitch.Build.Tasks.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2754/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{DA98106F-DEFA-4A62-8804-0BD2F166A45D}" Configuration="Debug|Any CPU">
+        <SpecializedConfiguration />
+      </FlavorProperties>
+      <FlavorProperties GUID="{DA98106F-DEFA-4A62-8804-0BD2F166A45D}" Configuration="Release|Any CPU">
+        <SpecializedConfiguration />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

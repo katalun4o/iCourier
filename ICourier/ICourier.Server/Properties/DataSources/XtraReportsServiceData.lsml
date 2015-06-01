@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityContainer
+    Name="XtraReportsServiceData">
+    <EntityContainer.Attributes>
+      <Partial
+        IsPrimary="True" />
+    </EntityContainer.Attributes>
+    <SubmitOperation
+      Name="SaveChanges" />
+  </EntityContainer>
+  <DataService
+    Name="XtraReportsServiceDataDataService"
+    DataProvider="CustomDataProvider"
+    EntityContainer="XtraReportsServiceData">
+    <DataService.Attributes>
+      <Partial
+        IsPrimary="True" />
+    </DataService.Attributes>
+    <DataService.ConnectionProperties>
+      <ConnectionProperty
+        Name="AssemblyName"
+        Value="DevExpress.XtraReports.v13.2.LightSwitch.Server" />
+      <ConnectionProperty
+        Name="FullClassName"
+        Value="DevExpress.XtraReports.LightSwitch.Server.XtraReportsService" />
+      <ConnectionProperty
+        Name="ConnectionStringGuid"
+        Value="f7ae2114-c791-46e8-b675-3ecf6d25e021" />
+      <ConnectionProperty
+        Name="ConnectionStringDescription"
+        Value="" />
+    </DataService.ConnectionProperties>
+  </DataService>
+</ServiceApplication>
