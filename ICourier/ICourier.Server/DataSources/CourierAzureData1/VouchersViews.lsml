@@ -452,6 +452,13 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="SecondaryVouchers"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -1059,6 +1066,11 @@
           Nullable="True"
           Type="int"
           Property="VouchersView/Properties[CashCheck]" />
+        <SsdlProperty
+          Name="SecondaryVouchers"
+          Nullable="True"
+          Type="nvarchar(max)"
+          Property="VouchersView/Properties[SecondaryVouchers]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>

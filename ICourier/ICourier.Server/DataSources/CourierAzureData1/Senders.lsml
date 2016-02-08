@@ -5,7 +5,7 @@
     <Partial />
   </ServiceApplication.Attributes>
   <EntityType
-    Name="Sender">
+    Name="Sender1">
     <EntityType.Methods>
       <EntityMethod
         Name="Delete">
@@ -28,6 +28,24 @@
           <NotSearchable />
         </KeyProperty.Attributes>
       </KeyProperty>
+      <EntityProperty
+        Name="CompanyID"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="6"
+            Scale="0" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Code"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
       <EntityProperty
         Name="Name"
         PropertyType=":String?">
@@ -61,6 +79,14 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
+        Name="StreetNum"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
         Name="Phone"
         PropertyType=":String?">
         <EntityProperty.Attributes>
@@ -74,16 +100,6 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="CompanyID"
-        PropertyType=":Decimal?">
-        <EntityProperty.Attributes>
-          <DecimalConstraint
-            Precision="6"
-            Scale="0" />
-          <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -124,42 +140,6 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
-      <EntityProperty
-        Name="Code"
-        PropertyType=":String?">
-        <EntityProperty.Attributes>
-          <MaxLength
-            Value="50" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="StreetNum"
-        PropertyType=":String?">
-        <EntityProperty.Attributes>
-          <MaxLength
-            Value="20" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <NavigationProperty
-        Name="Vouchers"
-        Association="FK_Voucher_Sender"
-        FromEnd="Sender"
-        ToEnd="Voucher" />
-      <NavigationProperty
-        Name="CostCenters"
-        Association="FK_CostCenters_Sender"
-        FromEnd="Sender"
-        ToEnd="CostCenters" />
-      <NavigationProperty
-        Name="ExcelLayouts"
-        Association="FK_ExcelLayouts_Sender"
-        FromEnd="Sender"
-        ToEnd="ExcelLayouts" />
-      <NavigationProperty
-        Name="Customers"
-        Association="FK_Customers_Sender"
-        FromEnd="Sender"
-        ToEnd="Customers" />
       <EntityProperty
         Name="WebServiceCode"
         PropertyType=":String?">
@@ -212,10 +192,15 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <NavigationProperty
+        Name="Vouchers"
+        Association="FK_Voucher_Sender1"
+        FromEnd="Sender"
+        ToEnd="Voucher" />
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
-    Name="CourierAzureData">
+    Name="CourierAzureData1">
     <EntityContainer.Attributes>
       <Partial />
     </EntityContainer.Attributes>
@@ -224,10 +209,10 @@
       CanDelete="True"
       CanInsert="True"
       CanUpdate="True"
-      EntityType="Sender" />
+      EntityType="Sender1" />
     <QueryOperation
       Name="Senders_Single"
-      ReturnType="Sender">
+      ReturnType="Sender1">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -267,7 +252,7 @@
     </QueryOperation>
     <QueryOperation
       Name="Senders_SingleOrDefault"
-      ReturnType="Sender">
+      ReturnType="Sender1">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -307,7 +292,7 @@
     </QueryOperation>
     <AssociationSet
       Name="FK_Voucher_Sender"
-      Association="FK_Voucher_Sender">
+      Association="FK_Voucher_Sender1">
       <AssociationSetEnd
         Name="Sender"
         EntitySet="Senders" />
@@ -315,42 +300,12 @@
         Name="Voucher"
         EntitySet="Vouchers" />
     </AssociationSet>
-    <AssociationSet
-      Name="FK_CostCenters_Sender"
-      Association="FK_CostCenters_Sender">
-      <AssociationSetEnd
-        Name="Sender"
-        EntitySet="Senders" />
-      <AssociationSetEnd
-        Name="CostCenters"
-        EntitySet="CostCenters" />
-    </AssociationSet>
-    <AssociationSet
-      Name="FK_ExcelLayouts_Sender"
-      Association="FK_ExcelLayouts_Sender">
-      <AssociationSetEnd
-        Name="Sender"
-        EntitySet="Senders" />
-      <AssociationSetEnd
-        Name="ExcelLayouts"
-        EntitySet="ExcelLayouts" />
-    </AssociationSet>
-    <AssociationSet
-      Name="FK_Customers_Sender"
-      Association="FK_Customers_Sender">
-      <AssociationSetEnd
-        Name="Sender"
-        EntitySet="Senders" />
-      <AssociationSetEnd
-        Name="Customers"
-        EntitySet="Customers" />
-    </AssociationSet>
   </EntityContainer>
   <Association
-    Name="FK_Voucher_Sender">
+    Name="FK_Voucher_Sender1">
     <AssociationEnd
       Name="Sender"
-      EntityType="Sender">
+      EntityType="Sender1">
       <AssociationEnd.Attributes>
         <DeleteRule />
       </AssociationEnd.Attributes>
@@ -358,52 +313,10 @@
     <AssociationEnd
       Name="Voucher"
       Multiplicity="Many"
-      EntityType="Voucher" />
-  </Association>
-  <Association
-    Name="FK_CostCenters_Sender">
-    <AssociationEnd
-      Name="Sender"
-      EntityType="Sender">
-      <AssociationEnd.Attributes>
-        <DeleteRule />
-      </AssociationEnd.Attributes>
-    </AssociationEnd>
-    <AssociationEnd
-      Name="CostCenters"
-      Multiplicity="Many"
-      EntityType="CostCenter" />
-  </Association>
-  <Association
-    Name="FK_ExcelLayouts_Sender">
-    <AssociationEnd
-      Name="Sender"
-      EntityType="Sender">
-      <AssociationEnd.Attributes>
-        <DeleteRule />
-      </AssociationEnd.Attributes>
-    </AssociationEnd>
-    <AssociationEnd
-      Name="ExcelLayouts"
-      Multiplicity="Many"
-      EntityType="ExcelLayout" />
-  </Association>
-  <Association
-    Name="FK_Customers_Sender">
-    <AssociationEnd
-      Name="Sender"
-      EntityType="Sender">
-      <AssociationEnd.Attributes>
-        <DeleteRule />
-      </AssociationEnd.Attributes>
-    </AssociationEnd>
-    <AssociationEnd
-      Name="Customers"
-      Multiplicity="Many"
-      EntityType="Customer" />
+      EntityType="Voucher2" />
   </Association>
   <DataService
-    Name="CourierAzureDataDataService">
+    Name="CourierAzureData1DataService">
     <DataService.Attributes>
       <Partial />
     </DataService.Attributes>
@@ -418,192 +331,129 @@
           Nullable="False"
           StoreGeneratedPattern="Identity"
           Type="numeric"
-          Property="Sender/Properties[SenderID]" />
+          Property="Sender1/Properties[SenderID]" />
         <SsdlProperty
           Name="CompanyID"
           Nullable="True"
           Precision="6"
           Type="numeric"
-          Property="Sender/Properties[CompanyID]" />
+          Property="Sender1/Properties[CompanyID]" />
         <SsdlProperty
           MaxLength="50"
           Name="Code"
           Nullable="True"
           Type="nvarchar"
-          Property="Sender/Properties[Code]" />
+          Property="Sender1/Properties[Code]" />
         <SsdlProperty
           MaxLength="100"
           Name="Name"
           Nullable="True"
           Type="nvarchar"
-          Property="Sender/Properties[Name]" />
+          Property="Sender1/Properties[Name]" />
         <SsdlProperty
           MaxLength="100"
           Name="City"
           Nullable="True"
           Type="nvarchar"
-          Property="Sender/Properties[City]" />
+          Property="Sender1/Properties[City]" />
         <SsdlProperty
           MaxLength="100"
           Name="Area"
           Nullable="True"
           Type="nvarchar"
-          Property="Sender/Properties[Area]" />
+          Property="Sender1/Properties[Area]" />
         <SsdlProperty
           MaxLength="200"
           Name="Address"
           Nullable="True"
           Type="nvarchar"
-          Property="Sender/Properties[Address]" />
+          Property="Sender1/Properties[Address]" />
         <SsdlProperty
           MaxLength="20"
           Name="StreetNum"
           Nullable="True"
           Type="nvarchar"
-          Property="Sender/Properties[StreetNum]" />
+          Property="Sender1/Properties[StreetNum]" />
         <SsdlProperty
           MaxLength="50"
           Name="Phone"
           Nullable="True"
           Type="nvarchar"
-          Property="Sender/Properties[Phone]" />
+          Property="Sender1/Properties[Phone]" />
         <SsdlProperty
           MaxLength="50"
           Name="PK"
           Nullable="True"
           Type="nvarchar"
-          Property="Sender/Properties[PK]" />
+          Property="Sender1/Properties[PK]" />
         <SsdlProperty
           MaxLength="50"
           Name="Username"
           Nullable="True"
           Type="nvarchar"
-          Property="Sender/Properties[Username]" />
+          Property="Sender1/Properties[Username]" />
         <SsdlProperty
           Name="VoucherNumberFrom"
           Nullable="True"
           Type="numeric"
-          Property="Sender/Properties[VoucherNumberFrom]" />
+          Property="Sender1/Properties[VoucherNumberFrom]" />
         <SsdlProperty
           Name="VoucherNumberTo"
           Nullable="True"
           Type="numeric"
-          Property="Sender/Properties[VoucherNumberTo]" />
+          Property="Sender1/Properties[VoucherNumberTo]" />
         <SsdlProperty
           Name="LastVoucherNumber"
           Nullable="True"
           Type="numeric"
-          Property="Sender/Properties[LastVoucherNumber]" />
+          Property="Sender1/Properties[LastVoucherNumber]" />
         <SsdlProperty
           MaxLength="200"
           Name="WebServiceCode"
           Nullable="True"
           Type="nvarchar"
-          Property="Sender/Properties[WebServiceCode]" />
+          Property="Sender1/Properties[WebServiceCode]" />
         <SsdlProperty
           Name="AutosaveCustomers"
           Nullable="True"
           Type="bit"
-          Property="Sender/Properties[AutosaveCustomers]" />
+          Property="Sender1/Properties[AutosaveCustomers]" />
         <SsdlProperty
           Name="RealTimeNotification"
           Nullable="True"
           Type="bit"
-          Property="Sender/Properties[RealTimeNotification]" />
+          Property="Sender1/Properties[RealTimeNotification]" />
         <SsdlProperty
           Name="SecondaryVoucherFrom"
           Nullable="True"
           Type="numeric"
-          Property="Sender/Properties[SecondaryVoucherFrom]" />
+          Property="Sender1/Properties[SecondaryVoucherFrom]" />
         <SsdlProperty
           Name="SecondaryVoucherTo"
           Nullable="True"
           Type="numeric"
-          Property="Sender/Properties[SecondaryVoucherTo]" />
+          Property="Sender1/Properties[SecondaryVoucherTo]" />
         <SsdlProperty
           Name="LastSecondaryVoucher"
           Nullable="True"
           Type="numeric"
-          Property="Sender/Properties[LastSecondaryVoucher]" />
+          Property="Sender1/Properties[LastSecondaryVoucher]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
-    <AssociationSetMapping
-      AssociationSet="FK_CostCenters_Sender">
-      <AssociationSetMapping.Attributes>
-        <SsdlAssociationSet
-          Name="FK_CostCenters_Sender" />
-        <SsdlAssociationSetEnd
-          End="CourierAzureData/Members[FK_CostCenters_Sender]/Members[Sender]">
-          <SsdlAssociationSetEnd.Attributes>
-            <SsdlPropertyRef
-              Name="SenderID" />
-          </SsdlAssociationSetEnd.Attributes>
-        </SsdlAssociationSetEnd>
-        <SsdlAssociationSetEnd
-          End="CourierAzureData/Members[FK_CostCenters_Sender]/Members[CostCenters]">
-          <SsdlAssociationSetEnd.Attributes>
-            <SsdlPropertyRef
-              Name="SenderID" />
-          </SsdlAssociationSetEnd.Attributes>
-        </SsdlAssociationSetEnd>
-      </AssociationSetMapping.Attributes>
-    </AssociationSetMapping>
-    <AssociationSetMapping
-      AssociationSet="FK_Customers_Sender">
-      <AssociationSetMapping.Attributes>
-        <SsdlAssociationSet
-          Name="FK_Customers_Sender" />
-        <SsdlAssociationSetEnd
-          End="CourierAzureData/Members[FK_Customers_Sender]/Members[Sender]">
-          <SsdlAssociationSetEnd.Attributes>
-            <SsdlPropertyRef
-              Name="SenderID" />
-          </SsdlAssociationSetEnd.Attributes>
-        </SsdlAssociationSetEnd>
-        <SsdlAssociationSetEnd
-          End="CourierAzureData/Members[FK_Customers_Sender]/Members[Customers]">
-          <SsdlAssociationSetEnd.Attributes>
-            <SsdlPropertyRef
-              Name="SenderID" />
-          </SsdlAssociationSetEnd.Attributes>
-        </SsdlAssociationSetEnd>
-      </AssociationSetMapping.Attributes>
-    </AssociationSetMapping>
-    <AssociationSetMapping
-      AssociationSet="FK_ExcelLayouts_Sender">
-      <AssociationSetMapping.Attributes>
-        <SsdlAssociationSet
-          Name="FK_ExcelLayouts_Sender" />
-        <SsdlAssociationSetEnd
-          End="CourierAzureData/Members[FK_ExcelLayouts_Sender]/Members[Sender]">
-          <SsdlAssociationSetEnd.Attributes>
-            <SsdlPropertyRef
-              Name="SenderID" />
-          </SsdlAssociationSetEnd.Attributes>
-        </SsdlAssociationSetEnd>
-        <SsdlAssociationSetEnd
-          End="CourierAzureData/Members[FK_ExcelLayouts_Sender]/Members[ExcelLayouts]">
-          <SsdlAssociationSetEnd.Attributes>
-            <SsdlPropertyRef
-              Name="SenderID" />
-          </SsdlAssociationSetEnd.Attributes>
-        </SsdlAssociationSetEnd>
-      </AssociationSetMapping.Attributes>
-    </AssociationSetMapping>
     <AssociationSetMapping
       AssociationSet="FK_Voucher_Sender">
       <AssociationSetMapping.Attributes>
         <SsdlAssociationSet
           Name="FK_Voucher_Sender" />
         <SsdlAssociationSetEnd
-          End="CourierAzureData/Members[FK_Voucher_Sender]/Members[Sender]">
+          End="CourierAzureData1/Members[FK_Voucher_Sender]/Members[Sender]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="SenderID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="CourierAzureData/Members[FK_Voucher_Sender]/Members[Voucher]">
+          End="CourierAzureData1/Members[FK_Voucher_Sender]/Members[Voucher]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="SenderID" />

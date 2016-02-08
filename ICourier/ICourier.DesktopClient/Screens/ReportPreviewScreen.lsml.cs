@@ -47,6 +47,9 @@ namespace LightSwitchApplication
                     case Clients.ClientInfo.Clients.Courier4U:
                         this.ReportTypeName = "LightSwitchApplication.VoucherReportCourier4U";
                         break;
+                    case Clients.ClientInfo.Clients.DELATOLAS:
+                        this.ReportTypeName = "LightSwitchApplication.PrintTemplates.Delatolas.DelatolasPrint";
+                        break;
                 }
                 //FIS
                 //this.ReportTypeName = "LightSwitchApplication.VoucherReport";

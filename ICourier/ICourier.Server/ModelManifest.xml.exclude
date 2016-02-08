@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\ApplicationData\Table1Items.lsml" Checksum="9756AF8ADE92F14D04CC20D7A2388563E7350F9BAC3FD832DBBDB8FB22BDEFAD" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\CourierAzureData\CostCenters.lsml" Checksum="CDA4ACC9F8333A08ED3C66ED3E679B77519A396EA61D6ADDC10E22D6B5F34F3B" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\CourierAzureData\Query3.lsml" Checksum="D6523BD4DB1AD302AE74A5381C5B0CEA07964AB9A0303011F1832D148D7DA77C" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\CourierAzureData\Customers.lsml" Checksum="688E4D366D983C1D18D0F375CC5F5D59810BE9C56B73F18F6C940537EB058715" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\CourierAzureData\queryCustomers.lsml" Checksum="3B7C4FF4613A53AD70F83160E6C15B256DE1C4150961F4FF42608EA729A98087" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\CourierAzureData\ExcelLayouts.lsml" Checksum="F614B7E7DEC84043E4253A35D5184AD9FADB61784C954A904F3E77DD851C6D08" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\CourierAzureData\queryExcelLayout.lsml" Checksum="6E3AC8C8FE8FD1FB043142CE46A69C0594E1E170AE95721DAE131CF20477E22A" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\CourierAzureData\Senders.lsml" Checksum="45E54ECC75DB1D64BB7DCAC821ED78AC18F492468FC1DC89EC04741668104571" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\CourierAzureData\Status.lsml" Checksum="AB09AD79E768A7B5D0308E0618E3E489B9A682990C4850CD0904D83A14B8FFEE" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\CourierAzureData\Vouchers.lsml" Checksum="B1D2CCA6ACCFC34FD29172ACC0CED0AC544B641FCA195236FF795D9DBFBE9314" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\CourierAzureData\Query1.lsml" Checksum="9791A750DB882DB22B2AB2E193B412A299047525083A7C4ADC594C731E8989F5" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\CourierAzureData\VouchersViews.lsml" Checksum="A4A4B4B367448CD929DC6BBDAF80F7490C317AD7C04ABA0B7B384AC90C3FFE51" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\CourierAzureData1\VouchersViewDoubles.lsml" Checksum="BBC388AB4EF1D5EC68C82912A3F786F122B54263EA92951D76472BDAFA9AAD72" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\CourierAzureData1\QueryVoucherViewDouble.lsml" Checksum="287F70A2A180248C1E28C7D9106890CCCDCF8E5918CBD117624DAA3EA4EB56CB" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\CourierAzureData1\VouchersViews.lsml" Checksum="3B960F778AC670F84177A966FD4DCA76D85DA5A6075CD3497030B05CA9E1BBDB" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\CourierAzureData1\SenderVouchersView.lsml" Checksum="A574D056476DEC93EE52ECDC7E1A66E2522AB9205E7A26312175088D8722DC48" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\CourierAzureData1\VouchersViewSorted.lsml" Checksum="03C1D4122020197A04E7B731637AE6D1E1FB385F2EB37F82383E35B8C57E9702" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\CourierAzureData2\Vouchers.lsml" Checksum="F28BB30F1853CE72E73608ED3A99B317DC2CE9DD94335502F1269FF6DB13D5F2" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\CourierAzureData2\Query2.lsml" Checksum="0A2B8016C25B3CC890A6469719DDEECBE7F58509BB6274D356AF928103444B37" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\DataSources\XtraReportsServiceData\MessageEnvelopes.lsml" Checksum="2DEF0F81924C72D113F9BDC637A8C453887AA8C62C4C78A8762B9654CAF739FA" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\Properties\DataSources\ApplicationData.lsml" Checksum="C9007E90610BDB16B02BFA701E17F70EAA51ACD70D7BB658DBA4901EFBFA0129" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\Properties\DataSources\CourierAzureData.lsml" Checksum="D4EC87557CB44053100A7CFDA510F64CB2CB8CF9D2574F0A49BD7FF96C9314D1" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\Properties\DataSources\CourierAzureData1.lsml" Checksum="03EE294EE41A99B0BB9FB59E5F5A41237BB40A176C9CFB068967D88927EDA0A0" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\Properties\DataSources\CourierAzureData2.lsml" Checksum="D5DB39A6C29890C4D0F7FEE1D56B563D21462772C019B34D9A8D082C49AF6F3A" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\Properties\DataSources\XtraReportsServiceData.lsml" Checksum="1CE5621E32F3938C775AF650271B586083913BE37B058C3BFE1651BAE9AB4D79" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.Server\Properties\Service.lsml" Checksum="B76CA90DCDAD19090BDAE3D40C16645988D804435E91DD9407581B4C0B6EDC58" />
+  </Documents>
+</ModelDocumentManifest>

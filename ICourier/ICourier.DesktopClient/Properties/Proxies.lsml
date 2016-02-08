@@ -22,12 +22,6 @@
         Target="ServiceInterface:XtraReportsServiceData" />
     </EntityContainer.Attributes>
   </EntityContainer>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
-        Target="ServiceInterface:VouchersView" />
-    </EntityType.Attributes>
-  </EntityType>
   <EntityContainer>
     <EntityContainer.Attributes>
       <Proxy
@@ -116,6 +110,30 @@
     <Association.Attributes>
       <Proxy
         Target="ServiceInterface:FK_Status_Voucher" />
+    </Association.Attributes>
+  </Association>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:VouchersView" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Sender1" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Voucher2" />
+    </EntityType.Attributes>
+  </EntityType>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Voucher_Sender1" />
     </Association.Attributes>
   </Association>
 </Application>

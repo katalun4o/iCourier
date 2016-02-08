@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.DesktopClient\Properties\Client.lsml" Checksum="299ED8686E8CD1A7775FC450A376048DC34320DF1811974AB84EBE9DC3F936CE" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.DesktopClient\Properties\CourierAzureData\Customers.lsml" Checksum="6AD63B04E7BCE0E11B370B57C54F549951031C45AAF6C8E4FEACEE9A4D8F8730" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.DesktopClient\Properties\CourierAzureData\Senders.lsml" Checksum="E0DF275450AEE32FB34715A1AA4941BC1091A99BD80E15A3B94AC87DFEA971F8" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.DesktopClient\Properties\CourierAzureData\Vouchers.lsml" Checksum="376B134E52DF59F08122AE66DE2D6DBABAF940B5998899845EC0CE84DB33D86E" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.DesktopClient\Properties\CourierAzureData2\Vouchers.lsml" Checksum="29C2C7796741B599FA77AB67CDCFED03923D868A0A6B3B4793F923988A47B480" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.DesktopClient\Properties\Proxies.lsml" Checksum="37261F741AA795B0AF01FDDCF7EE5879255C3D3B5D99525B1956C77439F37750" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.DesktopClient\Screens\CreateNewSender.lsml" Checksum="4D2EF43E01DBCDDF3D87DE5216AF0F1CB6C40DC6EA7277B3D66C83C3064EDFCB" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.DesktopClient\Screens\EditableCostCentersGrid.lsml" Checksum="16ADDD2B2277C5DEEF59A1A1D6C25E4178D87CFABF85D6E4A81D6AF086F640AF" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.DesktopClient\Screens\EditableCustomersGrid.lsml" Checksum="6BF8C8F6A6AEAAB3BE3B0610F658535A6FE0237A5285D4680EDD5B9869025DC0" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.DesktopClient\Screens\EditableSendersGrid.lsml" Checksum="09EA78D12B7351BCEC26AB939E7DA9A5ED781AB54F2154B215A464273EEFEFAC" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.DesktopClient\Screens\EditableVouchersGrid.lsml" Checksum="3E150516EFF03455796D12167AEAFAAB5093B050762E755F5E3B2E747551423E" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.DesktopClient\Screens\ReportPreviewScreen.lsml" Checksum="9DB50487E2EF40A45C5675C648F19F6FEBF4F797F08EDE90AEA488793FAC0F8E" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.DesktopClient\Screens\SearchVouchersViews.lsml" Checksum="FB1588E1F5B583042146B99B55ED4CAECBBCBB375E515BD9384952D9CCB641AE" />
+    <Document FullPath="D:\Projects\git\iCourier\ICourier\ICourier.DesktopClient\Screens\VoucherEditScreen.lsml" Checksum="16DA1886ED8C59B75E65605939A338321996A722913A2AFC48F894D4589E3DA9" />
+  </Documents>
+</ModelDocumentManifest>

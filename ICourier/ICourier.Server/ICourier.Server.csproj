@@ -88,6 +88,9 @@
     <Reference Include="DevExpress.Xpo.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.Xpo.v13.2.Web, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="DevExpress.XtraCharts.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
@@ -278,6 +281,9 @@
       <DependentUpon>Table1Items.lsml</DependentUpon>
     </Compile>
     <Compile Include="DataSources\ApplicationData\_ApplicationDataService.lsml.cs" />
+    <Compile Include="DataSources\CourierAzureData1\Sender1.lsml.cs">
+      <DependentUpon>Senders.lsml</DependentUpon>
+    </Compile>
     <Compile Include="DataSources\CourierAzureData2\Voucher1.lsml.cs">
       <DependentUpon>Vouchers.lsml</DependentUpon>
     </Compile>
@@ -289,6 +295,9 @@
     </Compile>
     <Compile Include="DataSources\CourierAzureData\ExcelLayout.lsml.cs">
       <DependentUpon>ExcelLayouts.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\CourierAzureData\Sender.lsml.cs">
+      <DependentUpon>Senders.lsml</DependentUpon>
     </Compile>
     <Compile Include="DataSources\CourierAzureData\Voucher.lsml.cs">
       <DependentUpon>Vouchers.lsml</DependentUpon>
@@ -329,6 +338,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NewDataset.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PrintTemplates\Delatolas\DelatolasPrint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintTemplates\Delatolas\DelatolasPrint.Designer.cs">
+      <DependentUpon>DelatolasPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintTemplates\Delatolas\IlCloner.cs" />
     <Compile Include="PrintTemplates\FIS\FisPrint.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -413,6 +429,11 @@
   <ItemGroup>
     <_ServerFile Include="LogIn.aspx" />
     <_ServerFile Include="LogOut.aspx" />
+    <LightSwitchModel Include="DataSources\CourierAzureData1\Query4.lsml">
+      <DependentUpon>VouchersViews.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\CourierAzureData1\Senders.lsml" />
+    <LightSwitchModel Include="DataSources\CourierAzureData1\Vouchers.lsml" />
     <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.4.js" />
     <Content Include="Scripts\jquery-1.6.4.min.js" />
@@ -492,6 +513,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="PrintTemplates\Delatolas\DelatolasPrint.resx">
+      <DependentUpon>DelatolasPrint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrintTemplates\FIS\FisPrint.resx">
       <DependentUpon>FisPrint.cs</DependentUpon>
     </EmbeddedResource>

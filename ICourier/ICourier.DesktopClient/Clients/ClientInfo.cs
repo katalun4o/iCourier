@@ -13,14 +13,15 @@ namespace LightSwitchApplication.Clients
 {
     public class ClientInfo
     {
-        public const Clients CurrentClient = Clients.FIS;
+        public const Clients CurrentClient = Clients.DELATOLAS;
 
         public enum Clients
         {
             ICC,
             FIS,
             INTERPOST,
-            Courier4U
+            Courier4U,
+            DELATOLAS
         }
     }
 }

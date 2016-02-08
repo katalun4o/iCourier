@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="Voucher2">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="VoucherID"
+        IsReadOnly="True"
+        PropertyType=":Decimal">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <DecimalConstraint
+            Precision="18"
+            Scale="0" />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Number"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="c_Date"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Weight"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="9"
+            Scale="3" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Count"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="6"
+            Scale="0" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Memo"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="500" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DeliveryHourFrom"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DeliveryHourTo"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Antikatavoli"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="18"
+            Scale="3" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IsPrinted"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReceiverCode"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReceiverName"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="100" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReceiverCity"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReceiverArea"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReceiverAddress"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="200" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReceiverStreetNum"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReceiverPhone"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReceiverPK"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CostCenterID"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BillOfLading"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="500" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Memo1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="500" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Memo2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="500" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TimeCommitment"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IsTaken"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IsReturn"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IsSaturday"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IsEdited"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PayerType"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PackageType"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReceiverPhone1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CashCheck"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DateCreated"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SecondaryVouchers"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Sender"
+        Association="FK_Voucher_Sender1"
+        FromEnd="Voucher"
+        ToEnd="Sender" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="CourierAzureData1">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="Vouchers"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Voucher2" />
+    <QueryOperation
+      Name="Vouchers_Single"
+      ReturnType="Voucher2">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="VoucherID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="VoucherID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Vouchers" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="VoucherID"
+        ParameterType=":Decimal?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'VoucherID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Vouchers_SingleOrDefault"
+      ReturnType="Voucher2">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="VoucherID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="VoucherID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Vouchers" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="VoucherID"
+        ParameterType=":Decimal?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'VoucherID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="CourierAzureData1DataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="Vouchers">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Voucher" />
+        <SsdlProperty
+          Name="VoucherID"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="numeric"
+          Property="Voucher2/Properties[VoucherID]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Number"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Voucher2/Properties[Number]" />
+        <SsdlProperty
+          Name="Date"
+          Nullable="False"
+          Type="datetime"
+          Property="Voucher2/Properties[c_Date]" />
+        <SsdlProperty
+          Name="Weight"
+          Nullable="True"
+          Precision="9"
+          Scale="3"
+          Type="numeric"
+          Property="Voucher2/Properties[Weight]" />
+        <SsdlProperty
+          Name="Count"
+          Nullable="True"
+          Precision="6"
+          Type="numeric"
+          Property="Voucher2/Properties[Count]" />
+        <SsdlProperty
+          MaxLength="500"
+          Name="Memo"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Voucher2/Properties[Memo]" />
+        <SsdlProperty
+          Name="DeliveryHourFrom"
+          Nullable="True"
+          Type="datetime"
+          Property="Voucher2/Properties[DeliveryHourFrom]" />
+        <SsdlProperty
+          Name="DeliveryHourTo"
+          Nullable="True"
+          Type="datetime"
+          Property="Voucher2/Properties[DeliveryHourTo]" />
+        <SsdlProperty
+          Name="Antikatavoli"
+          Nullable="True"
+          Scale="3"
+          Type="numeric"
+          Property="Voucher2/Properties[Antikatavoli]" />
+        <SsdlProperty
+          Name="IsPrinted"
+          Nullable="True"
+          Type="bit"
+          Property="Voucher2/Properties[IsPrinted]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="ReceiverCode"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Voucher2/Properties[ReceiverCode]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="ReceiverName"
+          Nullable="False"
+          Type="nvarchar"
+          Property="Voucher2/Properties[ReceiverName]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="ReceiverCity"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Voucher2/Properties[ReceiverCity]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="ReceiverArea"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Voucher2/Properties[ReceiverArea]" />
+        <SsdlProperty
+          MaxLength="200"
+          Name="ReceiverAddress"
+          Nullable="False"
+          Type="nvarchar"
+          Property="Voucher2/Properties[ReceiverAddress]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="ReceiverStreetNum"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Voucher2/Properties[ReceiverStreetNum]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="ReceiverPhone"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Voucher2/Properties[ReceiverPhone]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="ReceiverPK"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Voucher2/Properties[ReceiverPK]" />
+        <SsdlProperty
+          Name="CostCenterID"
+          Nullable="True"
+          Type="int"
+          Property="Voucher2/Properties[CostCenterID]" />
+        <SsdlProperty
+          MaxLength="500"
+          Name="BillOfLading"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Voucher2/Properties[BillOfLading]" />
+        <SsdlProperty
+          MaxLength="500"
+          Name="Memo1"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Voucher2/Properties[Memo1]" />
+        <SsdlProperty
+          MaxLength="500"
+          Name="Memo2"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Voucher2/Properties[Memo2]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="TimeCommitment"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Voucher2/Properties[TimeCommitment]" />
+        <SsdlProperty
+          Name="IsTaken"
+          Nullable="True"
+          Type="bit"
+          Property="Voucher2/Properties[IsTaken]" />
+        <SsdlProperty
+          Name="IsReturn"
+          Nullable="True"
+          Type="bit"
+          Property="Voucher2/Properties[IsReturn]" />
+        <SsdlProperty
+          Name="IsSaturday"
+          Nullable="True"
+          Type="bit"
+          Property="Voucher2/Properties[IsSaturday]" />
+        <SsdlProperty
+          Name="IsEdited"
+          Nullable="True"
+          Type="bit"
+          Property="Voucher2/Properties[IsEdited]" />
+        <SsdlProperty
+          Name="PayerType"
+          Nullable="True"
+          Type="int"
+          Property="Voucher2/Properties[PayerType]" />
+        <SsdlProperty
+          Name="PackageType"
+          Nullable="True"
+          Type="int"
+          Property="Voucher2/Properties[PackageType]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="ReceiverPhone1"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Voucher2/Properties[ReceiverPhone1]" />
+        <SsdlProperty
+          Name="CashCheck"
+          Nullable="True"
+          Type="int"
+          Property="Voucher2/Properties[CashCheck]" />
+        <SsdlProperty
+          Name="DateCreated"
+          Nullable="True"
+          Type="datetime"
+          Property="Voucher2/Properties[DateCreated]" />
+        <SsdlProperty
+          Name="SecondaryVouchers"
+          Nullable="True"
+          Type="nvarchar(max)"
+          Property="Voucher2/Properties[SecondaryVouchers]" />
+        <SsdlForeignKeyProperty
+          Name="SenderID"
+          Nullable="True"
+          Type="numeric"
+          PropertyName="SenderID" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+  </DataService>
+</ServiceApplication>

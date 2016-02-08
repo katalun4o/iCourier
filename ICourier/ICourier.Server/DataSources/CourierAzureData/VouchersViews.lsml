@@ -438,6 +438,36 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="SecondaryVoucherFrom"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="18"
+            Scale="0" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SecondaryVoucherTo"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="18"
+            Scale="0" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LastSecondaryVoucher"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="18"
+            Scale="0" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -1045,6 +1075,21 @@
           Nullable="True"
           Type="int"
           Property="VouchersView1/Properties[CashCheck]" />
+        <SsdlProperty
+          Name="SecondaryVoucherFrom"
+          Nullable="True"
+          Type="numeric"
+          Property="VouchersView1/Properties[SecondaryVoucherFrom]" />
+        <SsdlProperty
+          Name="SecondaryVoucherTo"
+          Nullable="True"
+          Type="numeric"
+          Property="VouchersView1/Properties[SecondaryVoucherTo]" />
+        <SsdlProperty
+          Name="LastSecondaryVoucher"
+          Nullable="True"
+          Type="numeric"
+          Property="VouchersView1/Properties[LastSecondaryVoucher]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>
