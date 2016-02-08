@@ -99,6 +99,14 @@ namespace LightSwitchApplication.PrintTemplates.Delatolas
                 this.DataSource = vouchersToPrint;
             }                       
         
+        }
+
+        private void xrPageBreak1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            if(CurrentRowIndex % 3 != 2)
+            {
+                e.Cancel = true;
+            }
         }        
     }
 }
