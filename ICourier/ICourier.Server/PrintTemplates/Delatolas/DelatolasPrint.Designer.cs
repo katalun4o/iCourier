@@ -379,8 +379,7 @@
             // 
             // tickHasPayment
             // 
-            this.tickHasPayment.ImageUrl = "D:\\Projects\\git\\iCourier\\ICourier\\ICourier.Server\\PrintTemplates\\Delatolas\\rsz_ti" +
-    "ck.png";
+            this.tickHasPayment.Image = ((System.Drawing.Image)(resources.GetObject("tickHasPayment.Image")));
             this.tickHasPayment.LocationFloat = new DevExpress.Utils.PointFloat(589.5417F, 114.1606F);
             this.tickHasPayment.Name = "tickHasPayment";
             this.tickHasPayment.SizeF = new System.Drawing.SizeF(15F, 15F);
@@ -389,8 +388,7 @@
             // 
             // tickHasPaymentCash
             // 
-            this.tickHasPaymentCash.ImageUrl = "D:\\Projects\\git\\iCourier\\ICourier\\ICourier.Server\\PrintTemplates\\Delatolas\\rsz_ti" +
-    "ck.png";
+            this.tickHasPaymentCash.Image = ((System.Drawing.Image)(resources.GetObject("tickHasPaymentCash.Image")));
             this.tickHasPaymentCash.LocationFloat = new DevExpress.Utils.PointFloat(578F, 132.0805F);
             this.tickHasPaymentCash.Name = "tickHasPaymentCash";
             this.tickHasPaymentCash.SizeF = new System.Drawing.SizeF(15F, 15F);
@@ -399,8 +397,7 @@
             // 
             // tickHasPaymentBillOfExchange
             // 
-            this.tickHasPaymentBillOfExchange.ImageUrl = "D:\\Projects\\git\\iCourier\\ICourier\\ICourier.Server\\PrintTemplates\\Delatolas\\rsz_ti" +
-    "ck.png";
+            this.tickHasPaymentBillOfExchange.Image = ((System.Drawing.Image)(resources.GetObject("tickHasPaymentBillOfExchange.Image")));
             this.tickHasPaymentBillOfExchange.LocationFloat = new DevExpress.Utils.PointFloat(578F, 150.6637F);
             this.tickHasPaymentBillOfExchange.Name = "tickHasPaymentBillOfExchange";
             this.tickHasPaymentBillOfExchange.SizeF = new System.Drawing.SizeF(15F, 15F);
@@ -409,8 +406,7 @@
             // 
             // tickHasPaymentCheck
             // 
-            this.tickHasPaymentCheck.ImageUrl = "D:\\Projects\\git\\iCourier\\ICourier\\ICourier.Server\\PrintTemplates\\Delatolas\\rsz_ti" +
-    "ck.png";
+            this.tickHasPaymentCheck.Image = ((System.Drawing.Image)(resources.GetObject("tickHasPaymentCheck.Image")));
             this.tickHasPaymentCheck.LocationFloat = new DevExpress.Utils.PointFloat(578F, 170.8354F);
             this.tickHasPaymentCheck.Name = "tickHasPaymentCheck";
             this.tickHasPaymentCheck.SizeF = new System.Drawing.SizeF(15F, 15F);
