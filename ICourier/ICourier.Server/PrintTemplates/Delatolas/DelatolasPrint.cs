@@ -13,6 +13,15 @@ namespace LightSwitchApplication.PrintTemplates.Delatolas
         public DelatolasPrint()
         {
             InitializeComponent();
+
+            this.lblPayWayBillOfExchange.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "PayWayBillOfExchange", "{0:#,#}")});
+
+            this.lblPayWayCash.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "PayWayCash", "{0:#,#}")});
+
+            this.lblPayWayCheck.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "PayWayCheck", "{0:#,#}")});
         }
 
         private void DelatolasPrint_DataSourceDemanded(object sender, EventArgs e)
@@ -107,6 +116,30 @@ namespace LightSwitchApplication.PrintTemplates.Delatolas
             {
                 e.Cancel = true;
             }
-        }        
+        }
+        
+        private void tickHasPayment_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            var currentRow = (VouchersView)this.GetCurrentRow();
+            e.Cancel = !(currentRow.PayWayCash.HasValue || currentRow.PayWayCheck.HasValue || currentRow.PayWayBillOfExchange.HasValue);
+        }
+
+        private void tickHasPaymentCash_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            var currentRow = (VouchersView)this.GetCurrentRow();
+            e.Cancel = !(currentRow.PayWayCash.HasValue);
+        }
+
+        private void tickHasPaymentBillOfExchange_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            var currentRow = (VouchersView)this.GetCurrentRow();
+            e.Cancel = !(currentRow.PayWayBillOfExchange.HasValue);
+        }
+
+        private void tickHasPaymentCheck_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            var currentRow = (VouchersView)this.GetCurrentRow();
+            e.Cancel = !(currentRow.PayWayCheck.HasValue);
+        }
     }
 }

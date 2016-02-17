@@ -22,28 +22,28 @@
     <ApplicationServerType>Azure</ApplicationServerType>
     <AuthenticationType>Forms</AuthenticationType>
     <ApplicationName>ICourier</ApplicationName>
-    <AssemblyVersion>1.2.183.0</AssemblyVersion>
+    <AssemblyVersion>1.2.188.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
     <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
     <SqlExpressInstanceName>(LocalDB)\v11.0</SqlExpressInstanceName>
-    <AdministratorFullName>inter1000</AdministratorFullName>
-    <AdministratorUserName>inter1000</AdministratorUserName>
+    <AdministratorFullName>delatolas</AdministratorFullName>
+    <AdministratorUserName>delatolas</AdministratorUserName>
     <AllowUntrustedCertificate>False</AllowUntrustedCertificate>
-    <DeployDatabase>False</DeployDatabase>
+    <DeployDatabase>True</DeployDatabase>
     <AddAdministrator>False</AddAdministrator>
     <BootstrapperComponentsUrl />
     <DefaultInstallLocation>ICourier</DefaultInstallLocation>
     <DeploySchema>True</DeploySchema>
     <PublishNewDatabase>True</PublishNewDatabase>
-    <PublishUrl>icourierfis.scm.azurewebsites.net:443</PublishUrl>
-    <PublishSite>icourierfis</PublishSite>
+    <PublishUrl>delatolas.scm.azurewebsites.net:443</PublishUrl>
+    <PublishSite>delatolas</PublishSite>
     <RemotePublish>True</RemotePublish>
     <SkipExtraFilesOnServer>True</SkipExtraFilesOnServer>
     <UseLightSwitchWebDeploymentProvider>False</UseLightSwitchWebDeploymentProvider>
     <AzureAllowUpgrade>True</AzureAllowUpgrade>
     <AzureAppendTimestampToDeploymentLabel>True</AzureAppendTimestampToDeploymentLabel>
     <AzureDeploymentLabel>ICourier</AzureDeploymentLabel>
-    <AzureWebSite>icourierfis</AzureWebSite>
+    <AzureWebSite>delatolas</AzureWebSite>
     <AzureWebSpace>northeuropewebspace</AzureWebSpace>
     <AzureServiceType>WebSite</AzureServiceType>
     <AzureHostedService />
@@ -179,13 +179,16 @@
   </ItemGroup>
   <ItemGroup>
     <PublishParameter Include="CourierAzureData">
-      <Value>Data Source=tcp:vr8xstxzhe.database.windows.net,1433;Initial Catalog=icourierfis;User ID=fis1000@vr8xstxzhe;Password=greg9898L#</Value>
+      <Value>Server=tcp:vr8xstxzhe.database.windows.net,1433;Database=delatolasDB;User ID=fis1000@vr8xstxzhe;Password=greg9898L#;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;</Value>
     </PublishParameter>
     <PublishParameter Include="CourierAzureData1">
-      <Value>Data Source=tcp:vr8xstxzhe.database.windows.net,1433;Initial Catalog=icourierfis;User ID=fis1000@vr8xstxzhe;Password=greg9898L#</Value>
+      <Value>Server=tcp:vr8xstxzhe.database.windows.net,1433;Database=delatolasDB;User ID=fis1000@vr8xstxzhe;Password=greg9898L#;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;</Value>
     </PublishParameter>
     <PublishParameter Include="CourierAzureData2">
-      <Value>Data Source=tcp:vr8xstxzhe.database.windows.net,1433;Initial Catalog=icourierfis;User ID=fis1000@vr8xstxzhe;Password=greg9898L#</Value>
+      <Value>Server=tcp:vr8xstxzhe.database.windows.net,1433;Database=delatolasDB;User ID=fis1000@vr8xstxzhe;Password=greg9898L#;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;</Value>
+    </PublishParameter>
+    <PublishParameter Include="DevExpress.XtraReports.LightSwitch.Server.XtraReportsService">
+      <Value>Server=tcp:vr8xstxzhe.database.windows.net,1433;Database=delatolasDB;User ID=fis1000@vr8xstxzhe;Password=greg9898L#;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;</Value>
     </PublishParameter>
   </ItemGroup>
   <ItemGroup>

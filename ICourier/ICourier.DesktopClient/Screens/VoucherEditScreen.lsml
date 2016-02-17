@@ -700,6 +700,177 @@
                       </ScreenExpressionTree>
                     </ContentItem.DataSource>
                   </ContentItem>
+                  <ContentItem
+                    Name="Volume"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="Κυβικά" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Voucher/Properties[Volume]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="PayWayCash"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="Τρόπος Αντικαταβολής - Μετρητά" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Voucher/Properties[PayWayCash]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="PayWayCheck"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="Τρόπος Αντικαταβολής - Επιταγή" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Voucher/Properties[PayWayCheck]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="PayWayBillOfExchange"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="Τρόπος Αντικαταβολής - Συναλαγματική" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Voucher/Properties[PayWayBillOfExchange]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="PayWayDesc"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="Σχόλια Αντικαταβολής" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Voucher/Properties[PayWayDesc]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="DeliveryNoteInvoice"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="Δελτίο Αποστολής - Τιμολόγιο" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Voucher/Properties[DeliveryNoteInvoice]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="VoucherGroup"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="Ομάδα" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Voucher/Properties[VoucherGroup]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="PackType"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Voucher/Properties[PackType]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Invoice"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Voucher/Properties[Invoice]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="MobilePhone"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Voucher/Properties[MobilePhone]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="PayWay"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Voucher/Properties[PayWay]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
                 </ContentItem>
               </ContentItem>
               <ContentItem

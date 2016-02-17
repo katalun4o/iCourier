@@ -299,6 +299,7 @@
       <Link>UserCode\Shared\Voucher.lsml.cs</Link>
     </Compile>
     <Compile Include="Clients\ClientInfo.cs" />
+    <Compile Include="Clients\DELATOLAS\VoucherGridStyle.cs" />
     <Compile Include="Clients\FIS\VoucherGridStyle.cs" />
     <Compile Include="Clients\GridColumnInfo.cs" />
     <Compile Include="Clients\ICC\VoucherGridStyle.cs" />

@@ -435,6 +435,7 @@
     <LightSwitchModel Include="DataSources\CourierAzureData1\Senders.lsml" />
     <LightSwitchModel Include="DataSources\CourierAzureData1\Vouchers.lsml" />
     <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="PrintTemplates\Delatolas\rsz_tick.png" />
     <Content Include="Scripts\jquery-1.6.4.js" />
     <Content Include="Scripts\jquery-1.6.4.min.js" />
     <Content Include="Scripts\jquery.signalR-2.1.2.js" />

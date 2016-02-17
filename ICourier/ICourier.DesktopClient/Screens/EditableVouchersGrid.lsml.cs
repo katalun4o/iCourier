@@ -266,6 +266,9 @@ namespace LightSwitchApplication
                     case Clients.ClientInfo.Clients.INTERPOST:
                         Clients.INTERPOST.VoucherGridStyle.CreateStyle(_dataGrid.Columns);
                         break;
+                    case Clients.ClientInfo.Clients.DELATOLAS:
+                        Clients.DELATOLAS.VoucherGridStyle.CreateStyle(_dataGrid.Columns);
+                        break;
                     default:
                         Clients.FIS.VoucherGridStyle.CreateStyle(_dataGrid.Columns);
                         break;

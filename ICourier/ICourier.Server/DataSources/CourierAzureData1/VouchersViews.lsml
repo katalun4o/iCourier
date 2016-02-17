@@ -459,6 +459,102 @@
           <MaxLength />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="Volume"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="18"
+            Scale="3" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PayWayCash"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="18"
+            Scale="3" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PayWayCheck"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="18"
+            Scale="3" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PayWayBillOfExchange"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="18"
+            Scale="3" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PayWayDesc"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="150" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DeliveryNoteInvoice"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="150" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="VoucherGroup"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PackType"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="150" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Invoice"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="150" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MobilePhone"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="150" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PayWay"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="150" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -1071,6 +1167,72 @@
           Nullable="True"
           Type="nvarchar(max)"
           Property="VouchersView/Properties[SecondaryVouchers]" />
+        <SsdlProperty
+          Name="Volume"
+          Nullable="True"
+          Scale="3"
+          Type="numeric"
+          Property="VouchersView/Properties[Volume]" />
+        <SsdlProperty
+          Name="PayWayCash"
+          Nullable="True"
+          Scale="3"
+          Type="numeric"
+          Property="VouchersView/Properties[PayWayCash]" />
+        <SsdlProperty
+          Name="PayWayCheck"
+          Nullable="True"
+          Scale="3"
+          Type="numeric"
+          Property="VouchersView/Properties[PayWayCheck]" />
+        <SsdlProperty
+          Name="PayWayBillOfExchange"
+          Nullable="True"
+          Scale="3"
+          Type="numeric"
+          Property="VouchersView/Properties[PayWayBillOfExchange]" />
+        <SsdlProperty
+          MaxLength="150"
+          Name="PayWayDesc"
+          Nullable="True"
+          Type="nvarchar"
+          Property="VouchersView/Properties[PayWayDesc]" />
+        <SsdlProperty
+          MaxLength="150"
+          Name="DeliveryNoteInvoice"
+          Nullable="True"
+          Type="nvarchar"
+          Property="VouchersView/Properties[DeliveryNoteInvoice]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="VoucherGroup"
+          Nullable="True"
+          Type="nvarchar"
+          Property="VouchersView/Properties[VoucherGroup]" />
+        <SsdlProperty
+          MaxLength="150"
+          Name="PackType"
+          Nullable="True"
+          Type="nvarchar"
+          Property="VouchersView/Properties[PackType]" />
+        <SsdlProperty
+          MaxLength="150"
+          Name="Invoice"
+          Nullable="True"
+          Type="nvarchar"
+          Property="VouchersView/Properties[Invoice]" />
+        <SsdlProperty
+          MaxLength="150"
+          Name="MobilePhone"
+          Nullable="True"
+          Type="nvarchar"
+          Property="VouchersView/Properties[MobilePhone]" />
+        <SsdlProperty
+          MaxLength="150"
+          Name="PayWay"
+          Nullable="True"
+          Type="nvarchar"
+          Property="VouchersView/Properties[PayWay]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>

@@ -52,6 +52,14 @@
       </EntityProperty>
       <EntityProperty>
         <EntityProperty.Attributes>
+          <Proxy
+            Target="ServiceInterface:Voucher/Properties[Volume]" />
+          <DisplayName
+            Value="Κυβικά" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty>
+        <EntityProperty.Attributes>
           <Computed />
           <Proxy
             Target="LightSwitchServiceApplication:Voucher/Properties[CustomDate]" />
