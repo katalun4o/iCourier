@@ -433,10 +433,14 @@ namespace LightSwitchApplication
                 }
             return newMapping;
         }
+
+        IEnumerable<Voucher> vouchersBeforeImport;
         partial void ExcelImport_Execute()
         {
             OfficeIntegration.Excel ex = new OfficeIntegration.Excel();
             ex.DataImported += Excel_DataImported;
+
+            vouchersBeforeImport = this.Vouchers.ToArray();
 
             ExcelLayout exel =  (from i in queryExcelLayout where i.ScreenName == this.GetType().Name select i).SingleOrDefault();
 
@@ -455,6 +459,34 @@ namespace LightSwitchApplication
 
         void Excel_DataImported(OfficeIntegration.DataImportedEventArgs e)
         {
+            var vouchersAfterImport = this.Vouchers.AsEnumerable();
+            var importedVouchers = vouchersAfterImport.Except(vouchersBeforeImport);
+
+            foreach(var importedVoucher in importedVouchers)
+            {
+                if(importedVoucher.Antikatavoli > 0)
+                {
+                    if (importedVoucher.PayWay.StartsWith("M") || importedVoucher.PayWay.StartsWith("Μ"))
+                    {
+                        // payment cash (Metrita)
+                        importedVoucher.PayWayCash = importedVoucher.Antikatavoli;
+                    }
+                    else
+                        if (importedVoucher.PayWay.StartsWith("E") || importedVoucher.PayWay.StartsWith("Ε"))
+                        {
+                            // payment check (Epitages)
+                            importedVoucher.PayWayCheck = importedVoucher.Antikatavoli;
+                        }
+                        else
+                            if (importedVoucher.PayWay.StartsWith("S") || importedVoucher.PayWay.StartsWith("Σ"))
+                            {
+                                // payment bill of exchange (Silagmatiki)
+                                importedVoucher.PayWayBillOfExchange = importedVoucher.Antikatavoli;
+                            }
+                }
+            }
+
+
             string importString = "";
             List<MyColumnMapping> myMappings = new List<MyColumnMapping>();
             foreach(var cm in e.ColumnMappings)
