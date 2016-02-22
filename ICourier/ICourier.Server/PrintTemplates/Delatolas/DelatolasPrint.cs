@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Drawing;
+using System.Linq;
+using System.Data.Linq;
 using System.Collections;
 using System.ComponentModel;
 using DevExpress.XtraReports.UI;
@@ -15,13 +17,17 @@ namespace LightSwitchApplication.PrintTemplates.Delatolas
             InitializeComponent();
 
             this.lblPayWayBillOfExchange.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "PayWayBillOfExchange", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "PayWayBillOfExchange", "{0:0.00}")});
 
             this.lblPayWayCash.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "PayWayCash", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "PayWayCash", "{0:0.00}")});
 
             this.lblPayWayCheck.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "PayWayCheck", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "PayWayCheck", "{0:0.00}")});
+
+            this.lblReceiverCity.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "ReceiverCity")});
+            
         }
 
         private void DelatolasPrint_DataSourceDemanded(object sender, EventArgs e)
@@ -89,6 +95,8 @@ namespace LightSwitchApplication.PrintTemplates.Delatolas
                             vouchersToPrint.Add(newVouchersView);
                         }
                     }
+
+                    
                     vouchersToPrint.Add(downloadedVoucher);
                 }
 
@@ -105,7 +113,13 @@ namespace LightSwitchApplication.PrintTemplates.Delatolas
 
                 ServerApplicationContext.Current.DataWorkspace.CourierAzureData1.SaveChanges();
 
-                this.DataSource = vouchersToPrint;
+                List<object> list = new List<object>();
+                list.AddRange(vouchersToPrint.AsEnumerable());
+                list.AddRange(vouchersToPrint.AsEnumerable());
+                list.AddRange(vouchersToPrint.AsEnumerable());
+
+                this.DataSource = list.OrderBy(o => ((VouchersView)o).Number);
+                //this.DataSource = vouchersToPrint;
             }                       
         
         }
