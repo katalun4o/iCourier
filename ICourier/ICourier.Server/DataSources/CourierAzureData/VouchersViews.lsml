@@ -541,6 +541,14 @@
             Value="150" />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="SenderTaxNum"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -1219,6 +1227,12 @@
           Nullable="True"
           Type="nvarchar"
           Property="VouchersView1/Properties[PayWay]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="SenderTaxNum"
+          Nullable="True"
+          Type="nvarchar"
+          Property="VouchersView1/Properties[SenderTaxNum]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>

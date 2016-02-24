@@ -31,6 +31,7 @@ namespace LightSwitchApplication.Clients.DELATOLAS
             fieldNames.Add("MobilePhone", new GridColumnInfo("Κινητό τηλέφωνο", true, 11));
             fieldNames.Add("PayWay", new GridColumnInfo("Payment Way", true, 12));
             fieldNames.Add("CurrentCustomer", new GridColumnInfo("ΑΝΑΖ.ΠΕΛΑΤΕΣ", true, 13));
+            fieldNames.Add("SenderTaxNum", new GridColumnInfo("AΦΜ", true, 13));
             fieldNames.Add("ReceiverCode", new GridColumnInfo("ΚΩΔΙΚΟΣ", true, 14));
             fieldNames.Add("ReceiverName", new GridColumnInfo("ΠΑΡΑΛΗΠΤΗΣ", true, 15));
             fieldNames.Add("ReceiverAddress", new GridColumnInfo("Δ/ΝΣΗ", true, 16));

@@ -25,8 +25,11 @@ namespace LightSwitchApplication.PrintTemplates.Delatolas
             this.lblPayWayCheck.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "PayWayCheck", "{0:0.00}")});
 
-            this.lblReceiverCity.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "ReceiverCity")});
+            //this.lblReceiverCity.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            //new DevExpress.XtraReports.UI.XRBinding("Text", null, "ReceiverCity")});
+
+            this.lblSenderTaxNum.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "SenderTaxNum")});
             
         }
 
