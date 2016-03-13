@@ -58,6 +58,7 @@
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.VoucherIDs = new DevExpress.XtraReports.Parameters.Parameter();
+            this.SenderID = new DevExpress.XtraReports.Parameters.Parameter();
             this.lightSwitchDataSource1 = new DevExpress.XtraReports.LightSwitchDataSource();
             this.lightSwitchDataSource3 = new DevExpress.XtraReports.LightSwitchDataSource();
             this.lightSwitchDataSource4 = new DevExpress.XtraReports.LightSwitchDataSource();
@@ -433,6 +434,13 @@
             this.VoucherIDs.Name = "VoucherIDs";
             this.VoucherIDs.Visible = false;
             // 
+            // SenderID
+            // 
+            this.SenderID.Name = "SenderID";
+            this.SenderID.Type = typeof(decimal);
+            this.SenderID.ValueInfo = "0";
+            this.SenderID.Visible = false;
+            // 
             // lightSwitchDataSource1
             // 
             this.lightSwitchDataSource1.CollectionName = "VouchersViews";
@@ -469,7 +477,8 @@
             this.PageWidth = 827;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
-            this.VoucherIDs});
+            this.VoucherIDs, 
+            this.SenderID});
             this.RequestParameters = false;
             this.Version = "13.2";
             this.DataSourceDemanded += new System.EventHandler<System.EventArgs>(this.VoucherReportKodo_DataSourceDemanded);
@@ -503,6 +512,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
         private DevExpress.XtraReports.UI.XRLabel xrLabel17;
         private DevExpress.XtraReports.Parameters.Parameter VoucherIDs;
+        private DevExpress.XtraReports.Parameters.Parameter SenderID;
         private DevExpress.XtraReports.UI.XRLabel xrLabel19;
         private DevExpress.XtraReports.UI.XRLabel xrLabel18;
         private DevExpress.XtraReports.UI.XRLabel xrLabel20;

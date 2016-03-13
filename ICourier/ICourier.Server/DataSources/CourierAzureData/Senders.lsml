@@ -212,6 +212,14 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="TaxNum"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -525,6 +533,12 @@
           Nullable="True"
           Type="numeric"
           Property="Sender/Properties[LastSecondaryVoucher]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="TaxNum"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Sender/Properties[TaxNum]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <AssociationSetMapping

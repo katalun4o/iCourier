@@ -29,7 +29,10 @@ namespace LightSwitchApplication.PrintTemplates.Delatolas
             //new DevExpress.XtraReports.UI.XRBinding("Text", null, "ReceiverCity")});
 
             this.lblSenderTaxNum.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "SenderTaxNum")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "TaxNum")});
+
+            this.lblReceiverTaxNum.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "ReceiverTaxNum")});
             
         }
 
@@ -123,7 +126,7 @@ namespace LightSwitchApplication.PrintTemplates.Delatolas
 
                 this.DataSource = list.OrderBy(o => ((VouchersView)o).Number);
                 //this.DataSource = vouchersToPrint;
-            }                       
+            }                
         
         }
 

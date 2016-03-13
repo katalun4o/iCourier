@@ -30,8 +30,7 @@ namespace LightSwitchApplication.Clients.DELATOLAS
             fieldNames.Add("Invoice", new GridColumnInfo("Παραστατικό", true, 10));
             fieldNames.Add("MobilePhone", new GridColumnInfo("Κινητό τηλέφωνο", true, 11));
             fieldNames.Add("PayWay", new GridColumnInfo("Payment Way", true, 12));
-            fieldNames.Add("CurrentCustomer", new GridColumnInfo("ΑΝΑΖ.ΠΕΛΑΤΕΣ", true, 13));
-            fieldNames.Add("SenderTaxNum", new GridColumnInfo("AΦΜ", true, 13));
+            fieldNames.Add("CurrentCustomer", new GridColumnInfo("ΑΝΑΖ.ΠΕΛΑΤΕΣ", true, 13));            
             fieldNames.Add("ReceiverCode", new GridColumnInfo("ΚΩΔΙΚΟΣ", true, 14));
             fieldNames.Add("ReceiverName", new GridColumnInfo("ΠΑΡΑΛΗΠΤΗΣ", true, 15));
             fieldNames.Add("ReceiverAddress", new GridColumnInfo("Δ/ΝΣΗ", true, 16));
@@ -39,6 +38,7 @@ namespace LightSwitchApplication.Clients.DELATOLAS
             fieldNames.Add("ReceiverCity", new GridColumnInfo("ΝΟΜΟΣ", true, 18));
             fieldNames.Add("ReceiverArea", new GridColumnInfo("ΠΕΡΙΟΧΗ", true, 19));
             fieldNames.Add("ReceiverPK", new GridColumnInfo("TK", true, 20));
+            fieldNames.Add("ReceiverTaxNum", new GridColumnInfo("AΦΜ", true, 20));
             fieldNames.Add("ReceiverPhone", new GridColumnInfo("ΤΗΛ.", true, 21));
             fieldNames.Add("ReceiverPhone1", new GridColumnInfo("ΤΗΛ.1", false, 22));
             fieldNames.Add("Antikatavoli", new GridColumnInfo("ΑΝΤ/ΛΗ", true, 23));

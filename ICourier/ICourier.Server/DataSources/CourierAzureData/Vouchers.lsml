@@ -504,7 +504,7 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="SenderTaxNum"
+        Name="ReceiverTaxNum"
         PropertyType=":String?">
         <EntityProperty.Attributes>
           <MaxLength
@@ -888,10 +888,10 @@
           Property="Voucher/Properties[PayWay]" />
         <SsdlProperty
           MaxLength="50"
-          Name="SenderTaxNum"
+          Name="ReceiverTaxNum"
           Nullable="True"
           Type="nvarchar"
-          Property="Voucher/Properties[SenderTaxNum]" />
+          Property="Voucher/Properties[ReceiverTaxNum]" />
         <SsdlForeignKeyProperty
           Name="CostCenterID"
           Nullable="True"

@@ -1660,18 +1660,14 @@
                 </ContentItem.DataSource>
               </ContentItem>
               <ContentItem
-                Name="SenderTaxNum"
+                Name="ReceiverTaxNum"
                 Kind="Value"
                 DataType=":String?">
-                <ContentItem.Attributes>
-                  <DisplayName
-                    Value="AΦΜ" />
-                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="Voucher/Properties[SenderTaxNum]" />
+                        Member="Voucher/Properties[ReceiverTaxNum]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>

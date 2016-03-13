@@ -542,7 +542,15 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="SenderTaxNum"
+        Name="TaxNum"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReceiverTaxNum"
         PropertyType=":String?">
         <EntityProperty.Attributes>
           <MaxLength
@@ -1229,10 +1237,16 @@
           Property="VouchersView1/Properties[PayWay]" />
         <SsdlProperty
           MaxLength="50"
-          Name="SenderTaxNum"
+          Name="ReceiverTaxNum"
           Nullable="True"
           Type="nvarchar"
-          Property="VouchersView1/Properties[SenderTaxNum]" />
+          Property="VouchersView1/Properties[ReceiverTaxNum]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="TaxNum"
+          Nullable="True"
+          Type="nvarchar"
+          Property="VouchersView1/Properties[TaxNum]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>

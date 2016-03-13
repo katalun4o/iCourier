@@ -22,7 +22,7 @@
     <ApplicationServerType>Azure</ApplicationServerType>
     <AuthenticationType>Forms</AuthenticationType>
     <ApplicationName>ICourier</ApplicationName>
-    <AssemblyVersion>1.2.194.0</AssemblyVersion>
+    <AssemblyVersion>1.2.196.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
     <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
     <SqlExpressInstanceName>(LocalDB)\v11.0</SqlExpressInstanceName>
@@ -35,15 +35,15 @@
     <DefaultInstallLocation>ICourier</DefaultInstallLocation>
     <DeploySchema>True</DeploySchema>
     <PublishNewDatabase>True</PublishNewDatabase>
-    <PublishUrl>delatolas.scm.azurewebsites.net:443</PublishUrl>
-    <PublishSite>delatolas</PublishSite>
+    <PublishUrl>testcourier.scm.azurewebsites.net:443</PublishUrl>
+    <PublishSite>testcourier</PublishSite>
     <RemotePublish>True</RemotePublish>
     <SkipExtraFilesOnServer>True</SkipExtraFilesOnServer>
     <UseLightSwitchWebDeploymentProvider>False</UseLightSwitchWebDeploymentProvider>
     <AzureAllowUpgrade>True</AzureAllowUpgrade>
     <AzureAppendTimestampToDeploymentLabel>True</AzureAppendTimestampToDeploymentLabel>
     <AzureDeploymentLabel>ICourier</AzureDeploymentLabel>
-    <AzureWebSite>delatolas</AzureWebSite>
+    <AzureWebSite>testcourier</AzureWebSite>
     <AzureWebSpace>northeuropewebspace</AzureWebSpace>
     <AzureServiceType>WebSite</AzureServiceType>
     <AzureHostedService />

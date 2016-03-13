@@ -182,6 +182,23 @@
                 </ContentItem.DataSource>
               </ContentItem>
               <ContentItem
+                Name="TaxNum"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="AΦΜ" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Sender/Properties[TaxNum]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
                 Name="Username"
                 Kind="Value"
                 DataType=":String?">
@@ -302,6 +319,19 @@
                     <ChainExpression>
                       <MemberExpression
                         Member="Sender/Properties[SecondaryVoucherTo]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="LastSecondaryVoucher"
+                Kind="Value"
+                DataType=":Decimal?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Sender/Properties[LastSecondaryVoucher]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>

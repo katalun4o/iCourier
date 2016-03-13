@@ -13,7 +13,7 @@ namespace LightSwitchApplication.Clients
 {
     public class ClientInfo
     {
-        public const Clients CurrentClient = Clients.DELATOLAS;
+        public const Clients CurrentClient = Clients.ICC;
 
         public enum Clients
         {
