@@ -161,5 +161,17 @@ namespace LightSwitchApplication.PrintTemplates.Delatolas
             var currentRow = (VouchersView)this.GetCurrentRow();
             e.Cancel = !(currentRow.PayWayCheck.HasValue);
         }
+
+        private void xrLabel7_EvaluateBinding(object sender, BindingEventArgs e)
+        {
+            var currentRow = (VouchersView)this.GetCurrentRow();
+            e.Value = string.Format("{0} {1}", currentRow.Address, currentRow.StreetNum);
+        }
+
+        private void xrLabel36_EvaluateBinding(object sender, BindingEventArgs e)
+        {
+            var currentRow = (VouchersView)this.GetCurrentRow();
+            e.Value = string.Format("{0} {1}", currentRow.ReceiverAddress, currentRow.ReceiverStreetNum);
+        }
     }
 }

@@ -31,6 +31,7 @@
             DevExpress.XtraPrinting.BarCode.Code128Generator code128Generator1 = new DevExpress.XtraPrinting.BarCode.Code128Generator();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DelatolasPrint));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.lblReceiverTaxNum = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblSenderTaxNum = new DevExpress.XtraReports.UI.XRLabel();
@@ -64,7 +65,6 @@
             this.SenderID = new DevExpress.XtraReports.Parameters.Parameter();
             this.newDataset1 = new LightSwitchApplication.NewDataset();
             this.vouchersViewDoubleAdapter = new LightSwitchApplication.NewDatasetTableAdapters.VouchersViewDoubleAdapter();
-            this.lblReceiverTaxNum = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.newDataset1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -103,6 +103,18 @@
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // lblReceiverTaxNum
+            // 
+            this.lblReceiverTaxNum.CanGrow = false;
+            this.lblReceiverTaxNum.Font = new System.Drawing.Font("Verdana", 8F);
+            this.lblReceiverTaxNum.LocationFloat = new DevExpress.Utils.PointFloat(457.4134F, 259.3753F);
+            this.lblReceiverTaxNum.Name = "lblReceiverTaxNum";
+            this.lblReceiverTaxNum.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblReceiverTaxNum.SizeF = new System.Drawing.SizeF(85.24995F, 17.8334F);
+            this.lblReceiverTaxNum.StylePriority.UseFont = false;
+            this.lblReceiverTaxNum.Text = "Receiver Tax Num";
+            this.lblReceiverTaxNum.WordWrap = false;
             // 
             // xrLabel3
             // 
@@ -255,6 +267,7 @@
             this.xrLabel36.StylePriority.UseFont = false;
             this.xrLabel36.Text = "xrLabel36";
             this.xrLabel36.WordWrap = false;
+            this.xrLabel36.EvaluateBinding += new DevExpress.XtraReports.UI.BindingEventHandler(this.xrLabel36_EvaluateBinding);
             // 
             // xrLabel35
             // 
@@ -351,6 +364,7 @@
             this.xrLabel7.StylePriority.UseFont = false;
             this.xrLabel7.Text = "xrLabel7";
             this.xrLabel7.WordWrap = false;
+            this.xrLabel7.EvaluateBinding += new DevExpress.XtraReports.UI.BindingEventHandler(this.xrLabel7_EvaluateBinding);
             // 
             // xrLabel12
             // 
@@ -485,18 +499,6 @@
             // vouchersViewDoubleAdapter
             // 
             this.vouchersViewDoubleAdapter.ClearBeforeFill = true;
-            // 
-            // lblReceiverTaxNum
-            // 
-            this.lblReceiverTaxNum.CanGrow = false;
-            this.lblReceiverTaxNum.Font = new System.Drawing.Font("Verdana", 8F);
-            this.lblReceiverTaxNum.LocationFloat = new DevExpress.Utils.PointFloat(457.4134F, 259.3753F);
-            this.lblReceiverTaxNum.Name = "lblReceiverTaxNum";
-            this.lblReceiverTaxNum.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblReceiverTaxNum.SizeF = new System.Drawing.SizeF(85.24995F, 17.8334F);
-            this.lblReceiverTaxNum.StylePriority.UseFont = false;
-            this.lblReceiverTaxNum.Text = "Receiver Tax Num";
-            this.lblReceiverTaxNum.WordWrap = false;
             // 
             // DelatolasPrint
             // 
