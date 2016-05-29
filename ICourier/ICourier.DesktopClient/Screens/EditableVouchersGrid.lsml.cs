@@ -165,7 +165,8 @@ namespace LightSwitchApplication
             //PrintLabels
             var btnPrintLabels =  this.FindControl("PrintLabels");
             
-            if(Clients.ClientInfo.CurrentClient == Clients.ClientInfo.Clients.INTERPOST)
+            if(Clients.ClientInfo.CurrentClient == Clients.ClientInfo.Clients.INTERPOST ||
+                Clients.ClientInfo.CurrentClient == Clients.ClientInfo.Clients.FIS)
                 btnPrintLabels.IsVisible = true;
             else
                 btnPrintLabels.IsVisible = false;

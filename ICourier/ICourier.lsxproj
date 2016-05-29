@@ -35,15 +35,15 @@
     <DefaultInstallLocation>ICourier</DefaultInstallLocation>
     <DeploySchema>True</DeploySchema>
     <PublishNewDatabase>True</PublishNewDatabase>
-    <PublishUrl>delatolas.scm.azurewebsites.net:443</PublishUrl>
-    <PublishSite>delatolas</PublishSite>
+    <PublishUrl>icourierfis.scm.azurewebsites.net:443</PublishUrl>
+    <PublishSite>icourierfis</PublishSite>
     <RemotePublish>True</RemotePublish>
     <SkipExtraFilesOnServer>True</SkipExtraFilesOnServer>
     <UseLightSwitchWebDeploymentProvider>False</UseLightSwitchWebDeploymentProvider>
     <AzureAllowUpgrade>True</AzureAllowUpgrade>
     <AzureAppendTimestampToDeploymentLabel>True</AzureAppendTimestampToDeploymentLabel>
     <AzureDeploymentLabel>ICourier</AzureDeploymentLabel>
-    <AzureWebSite>delatolas</AzureWebSite>
+    <AzureWebSite>icourierfis</AzureWebSite>
     <AzureWebSpace>northeuropewebspace</AzureWebSpace>
     <AzureServiceType>WebSite</AzureServiceType>
     <AzureHostedService />
@@ -179,16 +179,16 @@
   </ItemGroup>
   <ItemGroup>
     <PublishParameter Include="CourierAzureData">
-      <Value>Data Source=tcp:vr8xstxzhe.database.windows.net,1433;Initial Catalog=delatolasDB;User Id=fis1000@vr8xstxzhe;Password=greg9898L#;</Value>
+      <Value>Data Source=tcp:vr8xstxzhe.database.windows.net,1433;Initial Catalog=icourierfis;User Id=fis1000@vr8xstxzhe;Password=greg9898L#;</Value>
     </PublishParameter>
     <PublishParameter Include="CourierAzureData1">
-      <Value>Data Source=tcp:vr8xstxzhe.database.windows.net,1433;Initial Catalog=delatolasDB;User Id=fis1000@vr8xstxzhe;Password=greg9898L#;</Value>
+      <Value>Data Source=tcp:vr8xstxzhe.database.windows.net,1433;Initial Catalog=icourierfis;User Id=fis1000@vr8xstxzhe;Password=greg9898L#;</Value>
     </PublishParameter>
     <PublishParameter Include="CourierAzureData2">
-      <Value>Data Source=tcp:vr8xstxzhe.database.windows.net,1433;Initial Catalog=delatolasDB;User Id=fis1000@vr8xstxzhe;Password=greg9898L#;</Value>
+      <Value>Data Source=tcp:vr8xstxzhe.database.windows.net,1433;Initial Catalog=icourierfis;User Id=fis1000@vr8xstxzhe;Password=greg9898L#;</Value>
     </PublishParameter>
     <PublishParameter Include="DevExpress.XtraReports.LightSwitch.Server.XtraReportsService">
-      <Value>Data Source=tcp:vr8xstxzhe.database.windows.net,1433;Initial Catalog=delatolasDB;User Id=fis1000@vr8xstxzhe;Password=greg9898L#;</Value>
+      <Value>Data Source=tcp:vr8xstxzhe.database.windows.net,1433;Initial Catalog=icourierfis;User Id=fis1000@vr8xstxzhe;Password=greg9898L#;</Value>
     </PublishParameter>
   </ItemGroup>
   <ItemGroup>

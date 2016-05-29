@@ -352,6 +352,12 @@
     <Compile Include="PrintTemplates\FIS\FisPrint.Designer.cs">
       <DependentUpon>FisPrint.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintTemplates\FIS\FisLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintTemplates\FIS\FisLabel.Designer.cs">
+      <DependentUpon>FisLabel.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrintTemplates\Interpost\InterpostPrint.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -520,6 +526,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PrintTemplates\FIS\FisPrint.resx">
       <DependentUpon>FisPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintTemplates\FIS\FisLabel.resx">
+      <DependentUpon>FisLabel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintTemplates\Interpost\InterpostPrint.resx">
       <DependentUpon>InterpostPrint.cs</DependentUpon>

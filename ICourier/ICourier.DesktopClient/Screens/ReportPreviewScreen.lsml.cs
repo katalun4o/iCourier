@@ -69,7 +69,16 @@ namespace LightSwitchApplication
                 else
                     if (this.ReportName == LabelPrint)
                     {
-                        this.ReportTypeName = "LightSwitchApplication.VoucherReportInterpostLabel";
+                        switch (Clients.ClientInfo.CurrentClient)
+                        {
+                            case Clients.ClientInfo.Clients.FIS:
+                                this.ReportTypeName = "LightSwitchApplication.FisLabel";
+                                break;
+                            case Clients.ClientInfo.Clients.INTERPOST:
+                                this.ReportTypeName = "LightSwitchApplication.VoucherReportInterpostLabel";
+                                break;
+                        }
+                        
                     }
             
         }
